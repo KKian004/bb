@@ -154,6 +154,80 @@ li span {
 .step-2 .giftbox .box {
   animation: flyDown 2s ease-in 0.05s forwards;
 }
+
+.birthdayCard {
+  position: sticky;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition-duration: 5s;
+}
+.birthdayCard:hover {
+  transform: perspective(2500px) rotate(5deg);
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    0 10px 100px rgba(0, 0, 0, 0.5);
+}
+.birthdayCard:hover .cardFront {
+  transform: rotatey(-160deg);
+}
+.birthdayCard:hover.image {
+  visibility: hidden;
+}
+.cardFront {
+  position: relative;
+  background-color: #fff;
+  width: 350px;
+  height: 500px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    30px 0 50px rgba(0, 0, 0, 0.4);
+  transition: 2s;
+}
+.cardmiddle {
+  position: absolute;
+  background-color: #fff;
+  width: 350px;
+  height: 500px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  transform-origin: left;
+  transition: 2s;
+}
+.cardmiddle:hover {
+  transform: perspective(2500px) rotate(180deg);
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    0 10px 100px rgba(0, 0, 0, 0.5);
+}
+.happy {
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  margin: 30px;
+  background-image: linear-gradient(120deg, #ffd856 0%, #f98c6e 100%);
+}
+p {
+  font-family: 'Brush Script MT';
+  margin: 5px;
+  color: #333;
+}
+.name {
+  position: absolute;
+  left: 250px;
+  top: 450px;
+  color: #333;
+}
+.back {
+  color: #333;
+  text-align: center;
+  margin: 30px;
+  outline-color: #333;
+}
+.image {
+  object-fit: contain;
+}
 @keyframes wobble {
   25% {
       transform: rotate(4deg);
