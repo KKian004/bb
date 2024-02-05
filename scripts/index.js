@@ -499,3 +499,16 @@ x = setInterval(function() {
   //     console.log("happy birthday");
   // }
 }, second);
+
+
+// Add an event listener to the <link>gift box</link> element
+document.querySelector('.giftbox').addEventListener('click', function() {
+  // Hide the <link>gift box</link> with a fade out effect
+ 
+  
+  // After a delay, display the <link>birthday card</link> with a fade in effect
+  setTimeout(function() {
+    document.querySelector('.birthdayCard').style.transition = 'opacity 3s';
+    document.querySelector('.birthdayCard').style.opacity = '1';
+  }, 2000); // Adjust the delay time (in milliseconds) as needed
+});
